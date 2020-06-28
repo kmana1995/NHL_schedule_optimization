@@ -4,7 +4,7 @@ import pandas as pd
 from math import *
 import os
 from pyomo.environ import *
-import gmplot
+
 
 
 # Get the 2019-2020 schedule
