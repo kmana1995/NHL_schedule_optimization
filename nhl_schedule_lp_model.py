@@ -8,7 +8,7 @@ from pyomo.environ import *
 
 
 # Get the 2019-2020 schedule
-schedule = pd.read_csv(os.path.join(os.path.dirname(__file__), 'nhl_schedule_2019_2020.csv'))
+schedule = pd.read_csv(os.path.join(os.path.dirname(__file__), r'data\nhl_schedule_2019_2020.csv'))
 schedule.columns = schedule.columns.str.upper()
 schedule = schedule[['HOME', 'VISITOR']]
 schedule['HOME'] = schedule['HOME'].str.strip()
@@ -49,7 +49,7 @@ class NHLScheduleOptimizer:
         :return schedule:
         """
         # Get the 2019-2020 schedule
-        schedule = pd.read_csv(os.path.join(os.path.dirname(__file__), 'nhl_schedule_2019_2020.csv'), parse_dates=['Date'])
+        schedule = pd.read_csv(os.path.join(os.path.dirname(__file__), r'data\nhl_schedule_2019_2020.csv'), parse_dates=['Date'])
         schedule.columns = schedule.columns.str.upper()
         schedule = schedule[['DATE','HOME','VISITOR']]
         schedule['HOME'] = schedule['HOME'].str.strip()
@@ -65,7 +65,7 @@ class NHLScheduleOptimizer:
         :return:
         """
         if source == 'csv':
-            arena_locations = pd.read_csv(os.path.join(os.path.dirname(__file__), 'arena_locations.csv'))
+            arena_locations = pd.read_csv(os.path.join(os.path.dirname(__file__), r'data\arena_locations.csv'))
         else:
             arena_locations = self.get_arena_locations_from_json()
         return arena_locations
@@ -98,7 +98,7 @@ class NHLScheduleOptimizer:
             longitude.append(float(json_dictionary[key]["long"]))
 
         dataframe = pd.DataFrame({'TEAM': teams, 'ARENA': arenas, 'LAT': latitude, 'LONG': longitude})
-        dataframe.to_csv(os.path.join(os.path.dirname(__file__), 'arena_locations.csv'))
+        dataframe.to_csv(os.path.join(os.path.dirname(__file__), r'data\arena_locations.csv'))
 
         return dataframe
 
