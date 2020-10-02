@@ -11,4 +11,6 @@ This project easily allows the analyst to optimize the 2019-2020 schedule for an
 
 An example of the run can be found at the bottom of the main .py file, under the if __name__ == '__main__' statement.
 
-A paper discussing the method is titled NHL_Schedule_Optimization.pdf
+## Read the paper
+
+A paper discussing the method can be found in the repository or at https://github.com/kmana1995/NHL_schedule_optimization/blob/master/NHL_Schedule_Optimization.pdf.
