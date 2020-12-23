@@ -2,8 +2,8 @@
 A linear program to optimize any NHL teams travel schedule schedule for distance traveled.<br><br>
 
 ## Results
-The model has shown appreciable results over the actual travel schedule for a majority of NHL teams. Consider the below example using the Arizona Coyotes, where the optimized schedule resulted in a <b> 25% reduction in travel time, or 11,956 miles</b>. <br>
-
+The model has shown appreciable results over the actual travel schedule for a majority of NHL teams. Consider the below example using the Vancouver Canucks, where the optimized schedule resulted in a <b> 15% reduction in travel time, or 7,109 miles</b>. <br>
+![alt text](https://github.com/kmana1995/NHL_schedule_optimization/blob/master/vancouver_canucks_opt_results.png?raw=true)<br><br>
 ## How to use the program
 This project easily allows the analyst to optimize the 2019-2020 schedule for any NHL team. Just by following these steps:<br><br>
 
